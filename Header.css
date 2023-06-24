@@ -1,0 +1,76 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+.header {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+.Contact, .Home, .AboutUs, .Target, .Events {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Home, .AboutUs, .Target, .Events {
+    margin-right: 90px;
+}
+
+.Home:hover a, .AboutUs:hover a, .Target:hover a, .Events:hover a, .Contact:hover a {
+    background-color: #a27b5f;
+    color: black;
+    border: solid #4b4331;
+    border-radius: 10px;
+}
+
+a {
+    border: solid;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-left: none;
+    border-right: none;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+}
+
+.login-text {
+    border: none;
+    font-size: 25px;
+    margin-left: 150px;
+}
+
+.user-icon {
+    height: 40px;
+    width: auto;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url("images/background1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    margin: 0;
+    padding: 0;
+}
