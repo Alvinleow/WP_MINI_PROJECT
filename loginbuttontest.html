@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Example</title>
+    <style>
+        .login {
+            margin: 20px;
+        }
+        .login button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <button id="loginButton" onclick="handleLoginClick()">Login</button>
+        <button id="profileButton" onclick="handleProfileClick()">Profile</button>
+    </div>
+
+    <script>
+        // Get the login button and profile button elements
+        var loginButton = document.getElementById('loginButton');
+        var profileButton = document.getElementById('profileButton');
+
+        // Check user login status
+        var isLoggedIn = true; // Set the initial login status
+
+        if (isLoggedIn) {
+            // User is logged in
+            var username = "John"; // Replace with the actual username of the logged-in user
+            loginButton.style.display = 'none'; // Hide the login button
+            profileButton.style.display = 'block'; // Show the profile button
+            profileButton.innerText = 'Welcome, ' + username + '!'; // Update the button text
+        } else {
+            // User is not logged in
+            loginButton.style.display = 'block'; // Show the login button
+            profileButton.style.display = 'none'; // Hide the profile button
+        }
+
+        function handleLoginClick() {
+            // Redirect to the login screen or perform other login-related actions
+            console.log("Login button clicked!");
+        }
+
+        function handleProfileClick() {
+            // Redirect to the profile screen or perform other profile-related actions
+            console.log("Profile button clicked!");
+        }
+    </script>
+</body>
+</html>
