@@ -1,0 +1,17 @@
+.body-container1 {
+    display: flex;
+    background-color: #a27b5f;
+    color: white;
+    height: auto;
+    width: 1300px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: solid 5px #4b4331;
+}
+
+.body1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}

@@ -20,6 +20,7 @@ nav {
     justify-content: center;
     font-size: 25px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    border: solid transparent;
 }
 
 .Home, .AboutUs, .Target, .Events {
@@ -29,8 +30,12 @@ nav {
 .Home:hover a, .AboutUs:hover a, .Target:hover a, .Events:hover a, .Contact:hover a {
     background-color: #a27b5f;
     color: black;
-    border: solid #4b4331;
+    box-shadow: 0 0 0 2px #4b4331;
     border-radius: 10px;
+}
+
+.login-text:hover {
+    border-bottom: solid white;
 }
 
 a {
@@ -73,4 +78,5 @@ body {
     background-size: auto;
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }

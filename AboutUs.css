@@ -1,0 +1,58 @@
+.AboutUs {
+    display: flex;
+    flex-direction: column;
+}
+
+.title  {
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: left;
+    margin: 20px;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.intro {
+    margin: 20px;
+}
+
+.member-container {
+    justify-content: center;
+    width: 1300px;
+    height: auto;
+}
+
+.members {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+
+.member {
+    display: flex;
+    flex-direction: row;
+}
+
+.member-pic {
+    border: solid 5px #4b4331;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.member-intro {
+    margin-left: 10px;
+}
+
+.member-img {
+    margin-left: -50px;
+    width: 150%;
+    width: 150%;
+    object-fit: contain;
+}

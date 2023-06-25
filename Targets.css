@@ -1,0 +1,130 @@
+.goal13 {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.title1, .title2, .title3{
+    width: 500px;
+    height: auto;
+    font-family: Arial Narrow, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.description1, .description2, .point-text, .target-description {
+    line-height: 1.7;
+}
+
+.description1 {
+    margin-left: 20px;
+    margin-right: 70px;
+}
+
+.description2 {
+    margin-left: 30px;
+}
+
+.description1, .description2 {
+    width: 700px;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.the-targets{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.targets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    width: 1300px;
+    margin-top: 50px;
+}
+
+.target {
+    display: flex;
+    flex-direction: row;
+    width: 620px;
+    height: auto;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+
+.target-icon {
+    width: 144px;
+    height: 172px;
+    flex-shrink: 0;
+}
+
+.target-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 430px;
+    height: auto;
+}
+
+.target-title {
+    font-family: Arial Narrow, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.icon-img {
+    width: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.things-to-do {
+    display: flex;
+    flex-direction: column;
+}
+
+.points {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    width: 1300px;
+    margin-top: 50px;
+}
+
+.point {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 620px;
+    height: auto;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.point-icon {
+    margin-top: 10px;
+    margin-left: 30px;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.point-text {
+    margin-left: 20px;
+}
