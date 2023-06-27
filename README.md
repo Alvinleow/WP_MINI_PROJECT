@@ -14,7 +14,7 @@ Year 2 Sem 2 WP Mini Project
 ## Function for Admin
 
 + Login (Admin account is registered by default)
-+ + Username: admin1
+  + Username: admin1
   + Password: Admin123
 + View Information
 + Add / Remove Events
