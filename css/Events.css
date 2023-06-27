@@ -1,0 +1,104 @@
+.event-title {
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: left;
+    margin: 20px;
+}
+
+.event-block {
+    background-color: #c8a389;
+    padding: 10px;
+    border: solid 5px #4b4331;
+    width: 600px;
+    height: auto;
+    color: #4b4331;
+}
+.event-block h3 {
+    margin: 0;
+}
+
+.events, .eventContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    height: auto;
+}
+
+.addEvent-button {
+    background-color: #4b4331;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+  }
+  
+  .addEvent-button:hover {
+    background-color: #6d604a;
+  }
+  
+  .addEvent-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 67, 49, 0.4);
+  }
+  
+  .addEvent-button:active {
+    background-color: #3c3427;
+  }
+
+  .align-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .participate {
+    background-color: #4b4331;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+  }
+  
+  .participate:hover {
+    background-color: #6d604a;
+  }
+  
+  .participate:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 67, 49, 0.4);
+  }
+  
+  .participate:active {
+    background-color: #3c3427;
+  }
+
+  .event-block.new-event {
+    margin: 20px;
+  }
+
+  .event-block.new-event button {
+    display: block;
+    margin: 0 auto;
+    background-color: #4b4331;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+  }
+  
+  .event-block.new-event button:hover {
+    background-color: #6d604a;
+  }
+  
+  .event-block.new-event button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 67, 49, 0.4);
+  }
+  
+  .event-block.new-event button:active {
+    background-color: #3c3427;
+  }

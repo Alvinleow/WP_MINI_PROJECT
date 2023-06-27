@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP Mini Project</title>
+    <link rel="stylesheet" type="text/css" href="css/Header.css">
+    <link rel="stylesheet" type="text/css" href="css/Body-Container-1.css">
+    <link rel="stylesheet" type="text/css" href="css/Events.css">
+    <link rel="stylesheet" type="text/css" href="css/Footer.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <div id="header">
+            <nav>
+                <div class="Home"><a class="headerLink" href="Admin/HomePageAdmin.html">Home Page</a></div>
+                <div class="AboutUs"><a class="headerLink" href="Admin/AboutUsAdmin.html">About Us</a></div>
+                <div class="Target"><a class="headerLink" href="Admin/TargetsAdmin.html">Goal13 Target</a></div>
+                <div class="Events"><a class="headerLink" href="#">Events</a></div>
+                <div class="Contact"><a class="headerLink" href="Admin/ContactAdmin.html">Contact</a></div>
+                <div class="login">
+                    <a class="login-text" id="loginButton" href="User/loginpage.html">Login</a>
+                    <div class="user-container">
+                        <span class="user-text" id="profileButton"></span>
+                        <img class="user-icon" src="images/user-icon.png" alt="user-icon">
+                        <ul class="user-menu">
+                            <li><a class="menu" href="http://localhost/utm/WP_MINI_PROJECT/php/attendance.php">Attendance</a></li>
+                          <li class="logOut" onclick="logOutEventAdmin()">Log Out</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <img class="icon" src="images/icon.png" alt="13ClimateAction">
+        </div>
+    </div>
+
+    <div class="body-container1">
+        <div class="eventContainer">
+            <p class="event-title">Upcoming Events</p>
+            <button class="addEvent-button" onclick="addEvent()">Add Event</button>
+            <div class="events" id="eventContainer">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <!-- Footer content goes here -->
+        <p>&copy; 2023 Climate Action. All rights reserved.</p>
+    </div>
+
+    <script src="js/AddEventScriptAdmin.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            populateEventBlocks(); // Call the function to retrieve event data from cookies and populate event blocks
+        });
+    </script>
+
+    <script src="js/loginbuttontest.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            getIsLoggedIn();
+        });
+    </script>
+</body>
+
+</html>

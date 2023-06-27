@@ -6,27 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>WP Mini Project</title>
-    <link rel="stylesheet" type="text/css" href="Header.css">
-    <link rel="stylesheet" type="text/css" href="Body-Container-1.css">
-    <link rel="stylesheet" type="text/css" href="Targets.css">
-    <link rel="stylesheet" type="text/css" href="Footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/Header.css">
+    <link rel="stylesheet" type="text/css" href="../css/Body-Container-1.css">
+    <link rel="stylesheet" type="text/css" href="../css/Targets.css">
+    <link rel="stylesheet" type="text/css" href="../css/Footer.css">
 </head>
 
 <body>
     <div class="header-container">
         <div id="header">
-        <nav>
-            <div class="Home"><a href="#">Home</a></div>
-            <div class="AboutUs"><a href="#">About Us</a></div>
-            <div class="Target"><a href="#">Goal13 Target</a></div>
-            <div class="Events"><a href="#">Events</a></div>
-            <div class="Contact"><a href="#">Contact</a></div>
-            <div class="login">
-                <a class="login-text" href="#">Login</a>
-                <img class="user-icon" src="images/user-icon.png" alt="user-icon">
-            </div>
-        </nav>
-        <img class="icon" src="images/icon.png" alt="13ClimateAction">
+            <nav>
+                <div class="Home"><a class="headerLink" href="../User/HomePage.html">Home</a></div>
+                <div class="AboutUs"><a class="headerLink" href="../User/AboutUs.html">About Us</a></div>
+                <div class="Target"><a class="headerLink" href="#">Goal13 Target</a></div>
+                <div class="Events"><a class="headerLink" href="../EventUser.html">Events</a></div>
+                <div class="Contact"><a class="headerLink" href="../User/Contact.html">Contact</a></div>
+                <div class="login">
+                    <a class="login-text" id="loginButton" href="loginpage.html">Login</a>
+                    <div class="user-container">
+                        <span class="user-text" id="profileButton"></span>
+                        <img class="user-icon" src="../images/user-icon.png" alt="user-icon">
+                        <ul class="user-menu">
+                            <li><a class="menu" href="../php/profile.php">View Profile</a></li>
+                          <li class="logOut" onclick="logOutUser()">Log Out</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <img class="icon" src="../images/icon.png" alt="13ClimateAction">
         </div>
     </div>
 
@@ -57,7 +64,7 @@
                 <div class="targets">
                     <div class="target">
                         <div class="target-icon">
-                            <img class="icon-img" src="images/target13.1.png" alt="Target13.1">
+                            <img class="icon-img" src="../images/target13.1.png" alt="Target13.1">
                         </div>
                         <div class="target-text">
                             <div class="target-title">
@@ -71,7 +78,7 @@
                     </div>
                     <div class="target">
                         <div class="target-icon">
-                            <img class="icon-img" src="images/target13.2.png" alt="Target13.2">
+                            <img class="icon-img" src="../images/target13.2.png" alt="Target13.2">
                         </div>
                         <div class="target-text">
                             <div class="target-title">
@@ -84,7 +91,7 @@
                     </div>
                     <div class="target">
                         <div class="target-icon">
-                            <img class="icon-img" src="images/target13.3.png" alt="Target13.3">
+                            <img class="icon-img" src="../images/target13.3.png" alt="Target13.3">
                         </div>
                         <div class="target-text">
                             <div class="target-title">
@@ -98,7 +105,7 @@
                     </div>
                     <div class="target">
                         <div class="target-icon">
-                            <img class="icon-img" src="images/target13.a.png" alt="Target13.A">
+                            <img class="icon-img" src="../images/target13.a.png" alt="Target13.A">
                         </div>
                         <div class="target-text">
                             <div class="target-title">
@@ -115,7 +122,7 @@
                     </div>
                     <div class="target">
                         <div class="target-icon">
-                            <img class="icon-img" src="images/target13.B.png" alt="Target13.B">
+                            <img class="icon-img" src="../images/target13.B.png" alt="Target13.B">
                         </div>
                         <div class="target-text">
                             <div class="target-title">
@@ -138,7 +145,7 @@
                 <div class="points">
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -149,7 +156,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -159,7 +166,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -169,7 +176,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -180,7 +187,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -190,7 +197,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -200,7 +207,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -211,7 +218,7 @@
                     </div>
                     <div class="point">
                         <div class="point-icon">
-                            <img src="images/point.png" alt="point">
+                            <img src="../images/point.png" alt="point">
                         </div>
                         <div class="point-text">
                             <p>
@@ -229,6 +236,13 @@
         <!-- Footer content goes here -->
         <p>&copy; 2023 Climate Action. All rights reserved.</p>
     </div>
+    
+    <script src="../js/loginbuttontest.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            getIsLoggedIn();
+        });
+    </script>
 </body>
 
 </html>

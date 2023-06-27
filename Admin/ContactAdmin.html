@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>WP Mini Project</title>
+    <link rel="stylesheet" type="text/css" href="../css/Header.css">
+    <link rel="stylesheet" type="text/css" href="../css/Body-Container-1.css">
+    <link rel="stylesheet" type="text/css" href="../css/Contact.css">
+    <link rel="stylesheet" type="text/css" href="../css/Footer.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <div id="header">
+            <nav>
+                <div class="Home"><a class="headerLink" href="../Admin/HomePageAdmin.html">Home Page</a></div>
+                <div class="AboutUs"><a class="headerLink" href="../Admin/AboutUsAdmin.html">About Us</a></div>
+                <div class="Target"><a class="headerLink" href="../Admin/TargetsAdmin.html">Goal13 Target</a></div>
+                <div class="Events"><a class="headerLink" href="../EventsAdmin.html">Events</a></div>
+                <div class="Contact"><a class="headerLink" href="#">Contact</a></div>
+                <div class="login">
+                    <a class="login-text" id="loginButton" href="../User/loginpage.html">Login</a>
+                    <div class="user-container">
+                        <span class="user-text" id="profileButton"></span>
+                        <img class="user-icon" src="../images/user-icon.png" alt="user-icon">
+                        <ul class="user-menu">
+                            <li><a class="menu" href="http://localhost/utm/WP_MINI_PROJECT/php/attendance.php">Attendance</a></li>
+                          <li class="logOut" onclick="logOutAdmin()">Log Out</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <img class="icon" src="../images/icon.png" alt="13ClimateAction">
+        </div>
+    </div>
+
+    <div class="body-container1">
+        <div class="contact-container">
+            <p class="contact-title">Contact Us!</p>
+            <div class="contact">
+                <div class="contact-left">
+                    <p>Goal 13 : Climate Action</p>
+                    <p>
+                        Universiti Teknologi Malaysia,<br>
+                        81310 Johor Bahru,<br>
+                        Johor, Malaysia.<br>
+                        climateAction@gmail.com<br>  
+                        Tel: 123-456-7890
+                        Fax: 123-456-7890
+                    </p>
+                </div>
+                <div class="contact-right">
+                    <table cellspacing="10">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="name">Name :</label>
+                                </td>
+                                <td>
+                                    <input type="text" class="contact-input" name="name" placeholder="Enter your name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">Email :</label>
+                                </td>
+                                <td>
+                                    <input type="email" class="contact-input" name="email" placeholder="Enter your email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="phone">Phone Number :</label>
+                                </td>
+                                <td>
+                                    <input type="text" class="contact-input" name="phone" placeholder="Enter your phone number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="top-align">
+                                    <label for="message">Your Message :</label>
+                                </td>
+                                <td>
+                                    <textarea  class="contact-input" name="message" id="message" 
+                                    cols="30" rows="10" placeholder="Enter your message"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td class="center-align">
+                                    <button type="submit" class="submit-button">Submit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <!-- Footer content goes here -->
+        <p>&copy; 2023 Climate Action. All rights reserved.</p>
+    </div>
+
+    <script src="../js/loginbuttontest.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            getIsLoggedIn();
+        });
+    </script>
+</body>
+
+</html>

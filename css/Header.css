@@ -21,6 +21,8 @@ nav {
     font-size: 25px;
     transition: background-color 0.3s ease, color 0.3s ease;
     border: solid transparent;
+    width: auto; /* Set the desired width for the buttons */
+    text-align: center; /* Center the button text */
 }
 
 .Home, .AboutUs, .Target, .Events {
@@ -38,7 +40,7 @@ nav {
     border-bottom: solid white;
 }
 
-a {
+.headerLink {
     border: solid;
     color: white;
     font-weight: bold;
@@ -57,12 +59,31 @@ a {
 .login-text {
     border: none;
     font-size: 25px;
-    margin-left: 150px;
+    margin-left: 70px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-left: none;
+    border-right: none;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.user-text {
+    border: none;
+    font-size: 20px;
+    color: white;
+    margin-left: 30px;
+    margin-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 7px;
+}  
 
 .user-icon {
     height: 40px;
     width: auto;
+    cursor: pointer;
 }
 
 .icon {
@@ -71,8 +92,17 @@ a {
     margin-right: auto;
 }
 
+.menu {
+    text-decoration: none;
+}
+
+.logOut {
+    color: red;
+    font-weight: bold;
+}
+
 body {
-    background-image: url("images/background1.png");
+    background-image: url("../images/background1.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto;
@@ -80,3 +110,38 @@ body {
     padding: 0;
     font-size: 18px;
 }
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .user-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-container:hover .user-menu {
+    display: block;
+  }
+  
+  .user-menu li {
+    cursor: pointer;
+    padding: 5px 0;
+  }
+  
+  .user-menu li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  
+  
