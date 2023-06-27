@@ -53,51 +53,51 @@
                     </p>
                 </div>
                 <div class="contact-right">
-                    <table cellspacing="10">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <label for="name">Name :</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="contact-input" name="name" placeholder="Enter your name">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="email">Email :</label>
-                                </td>
-                                <td>
-                                    <input type="email" class="contact-input" name="email" placeholder="Enter your email">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="phone">Phone Number :</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="contact-input" name="phone" placeholder="Enter your phone number">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="top-align">
-                                    <label for="message">Your Message :</label>
-                                </td>
-                                <td>
-                                    <textarea  class="contact-input" name="message" id="message" 
-                                    cols="30" rows="10" placeholder="Enter your message"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td class="center-align">
-                                    <button type="submit" class="submit-button">Submit</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <form action="http://localhost/utm/WP_MINI_PROJECT/php/contactTable.php" method="post" name="contact">
+                        <table cellspacing="10">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="name">Name :</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="contact-input" name="name" placeholder="Enter your name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Email :</label>
+                                    </td>
+                                    <td>
+                                        <input type="email" class="contact-input" name="email" placeholder="Enter your email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phone">Phone Number :</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="contact-input" name="phone" placeholder="Enter your phone number">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="top-align">
+                                        <label for="message">Your Message :</label>
+                                    </td>
+                                    <td>
+                                        <textarea  class="contact-input" name="message" id="message" 
+                                        cols="30" rows="10" placeholder="Enter your message"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="center-align">
+                                        <button type="submit" class="submit-button">Submit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>

@@ -67,57 +67,19 @@ function checkAttendance($conn, $eventName, $username)
 
 <head>
   <title>User Profile</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 600px;
-      margin: 100px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    .profile-data {
-      margin-bottom: 15px;
-    }
-
-    .profile-data label {
-      font-weight: bold;
-    }
-
-    .profile-data span {
-      margin-left: 10px;
-    }
-
-    .activity-table {
-      margin-top: 20px;
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .activity-table th,
-    .activity-table td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="../css/Header.css">
+  <link rel="stylesheet" type="text/css" href="../css/table.css">
+  <link rel='stylesheet' type='text/css' href="../css/Body-Container-2.css">
+  <link rel='stylesheet' type='text/css' href="../css/userProfile.css">
+  <link rel='stylesheet' type='text/css' href='../css/AboutUs.css'>
 </head>
 
 <body>
-  <div class="container">
-    <h2>User Profile</h2>
+  <div class="body-container">
+    <div class='text'>
+      <p class='title'>User Profile</p>
+      <a class='back' href='../User/HomePage.html'> < Back to Home Page</a>
+    </div>
     <div class="profile-data">
       <label>Username:</label>
       <span><?php echo $username; ?></span>
@@ -142,14 +104,14 @@ function checkAttendance($conn, $eventName, $username)
       <label>Address:</label>
       <span><?php echo $address; ?></span>
     </div>
-    <div class="activities-list">
+    <div class="activities-list ">
       <h3>Activities with Attendance:</h3>
       <?php if ($eventListResult->num_rows > 0) : ?>
         <table class="activity-table">
           <tr>
-            <th>Event ID</th>
-            <th>Event Name</th>
-            <th>Attendance</th>
+            <th class="eventId">Event ID</th>
+            <th class="eventName">Event Name</th>
+            <th class="attendance">Attendance</th>
           </tr>
           <?php while ($eventRow = $eventListResult->fetch_assoc()) : ?>
             <tr>

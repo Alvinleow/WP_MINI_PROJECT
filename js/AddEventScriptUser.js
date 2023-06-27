@@ -74,7 +74,7 @@ function getEventDataFromCookies() {
         console.log("Participate button clicked for event:", eventName);
   
         // Display event name in alert message
-        alert("Event Name: " + eventName);
+        alert("Participate Successfully.");
         // Send an AJAX request to insert the user's full name into the corresponding event table
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "http://localhost/utm/WP_MINI_PROJECT/php/insertParticipant.php", true);

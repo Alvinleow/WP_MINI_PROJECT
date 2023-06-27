@@ -23,7 +23,11 @@ $sql = "CREATE TABLE IF NOT EXISTS User (
     email VARCHAR(100) NOT NULL,
     phone VARCHAR(20) NOT NULL,
     addresses TEXT NOT NULL
-)";
+);
+
+INSERT INTO User (userlevel, username, passwords, fullname, identityNum, email, phone, addresses) 
+VALUES (2, 'admin1', 'Admin123', 'admin1', 'admin1', 'admin1', 'admin1', 'admin1');";
+
 
 if ($conn->query($sql) === TRUE) 
 {

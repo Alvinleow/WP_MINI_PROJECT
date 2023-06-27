@@ -1,0 +1,9 @@
+table, th, td{
+    border:3px solid #4b4331;
+    border-collapse: collapse;
+    padding: 30px;
+    margin: 20px;
+    font-size: 20px;
+    background-color: #d9af91;
+    color: black;
+}

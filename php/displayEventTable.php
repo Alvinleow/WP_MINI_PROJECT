@@ -22,6 +22,39 @@ $result = $conn->query($sqlSelectEventTable);
 
 if ($result && $result->num_rows > 0) {
     // Display the event's table
+    echo "<head>";
+    echo "<meta charset='UTF-8'>";
+    echo "<meta http-equiv='X-UA-Compatible' content='IE=edge'>";
+    echo "<meta name='viewport' content='width=device-width initial-scale=1.0'>";
+    echo "<title>WP Mini Project</title>";
+    echo "<link rel='stylesheet' type='text/css' href='../css/Header.css'>";
+    echo "<link rel='stylesheet' type='text/css' href='../css/Body-Container-2.css'>";
+    echo "<link rel='stylesheet' type='text/css' href='../css/AboutUs.css'>";
+    echo "<link rel='stylesheet' type='text/css' href='../css/table.css'>";
+    echo "<style>
+            .add {
+                background-color: green;
+                width: 128px;
+                height: 37px;
+            }
+
+            .delete {
+                background-color: red;
+            }
+
+            .add, .delete {
+                color: white;
+                font-weight: bold;
+            }
+          </style>";
+    echo "</head>";
+
+    echo "<body>";
+    echo "<div class='body-container'>";
+    echo "<div class='text'>";
+    echo "<p class='title'>". $eventName ."</p>";
+    echo "<a class='back' href='http://localhost/utm/WP_MINI_PROJECT/php/attendance.php'> < Back to Event List</a>";
+    echo "</div>";
     echo "<table>";
     echo "<tr><th>Number</th><th>Participant's Name</th><th>Attendance</th><th>Action</th></tr>";
     while ($row = $result->fetch_assoc()) {
@@ -32,17 +65,21 @@ if ($result && $result->num_rows > 0) {
         echo "<td>";
         
         if ($row["attendance"] == 0) {
-            echo "<button onclick=\"updateAttendance('$eventName', " . $row["numbers"] . ", 1)\">Add Attendance</button>";
+            echo "<button class='add' onclick=\"updateAttendance('$eventName', " . $row["numbers"] . ", 1)\">Add Attendance</button>";
         } else {
-            echo "<button onclick=\"updateAttendance('$eventName', " . $row["numbers"] . ", 0)\">Delete Attendance</button>";
+            echo "<button class='delete' onclick=\"updateAttendance('$eventName', " . $row["numbers"] . ", 0)\">Delete Attendance</button>";
         }
         
         echo "</td>";
         echo "</tr>";
     }
     echo "</table>";
+    echo "</div>";
+    echo "</body>";
 } else {
-    echo "No data found for the event.";
+    echo "<script>alert('No data found for the event.');</script>";
+    echo "<script>window.location.href = 'http://localhost/utm/WP_MINI_PROJECT/php/attendance.php';</script>";
+    exit;
 }
 
 // Close the database connection

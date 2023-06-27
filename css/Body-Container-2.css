@@ -1,0 +1,30 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #a27b5f;
+    color: white;
+    height: auto;
+    width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: solid 5px #4b4331;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+}
+
+.back {
+    margin: auto;
+    text-decoration: none;
+    border: solid 3px #4b4331;
+    padding: 10px;
+    background-color: #d9af91;
+    border-radius: 20px;
+}
+
+a {
+    color: black;
+}
