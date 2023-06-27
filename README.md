@@ -19,3 +19,5 @@ Year 2 Sem 2 WP Mini Project
 + View Event List
 + Add / Remove Attendance
 + Log Out
+
+**Place the file in path http://localhost/utm/WP_MINI_PROJECT/ **
