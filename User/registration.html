@@ -57,34 +57,69 @@
   </style>
 
 <script>
-  function validatePassword() {
+  function validateForm() {
+    var errorMessages = [];
+
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;
-
-    if (password != confirmPassword) {
-      alert("Passwords do not match!");
-      return false;
-    }
-    return true;
-  }
-
-  function validateForm() {
-    var password = document.getElementById("password").value;
     var regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
 
-    if (!regex.test(password)) {
-      alert("Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and be at least 8 characters long!");
-      return false;
+    if (password !== confirmPassword) {
+      errorMessages.push("Passwords do not match!");
     }
-    return true;
-  }
 
-  function registerUser() {
-    if (validateForm() && validatePassword()) {
+    if (!regex.test(password)) {
+      errorMessages.push("Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and be 8 to 15 characters long!");
+    }
+
+    var email = document.getElementById("email").value;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      errorMessages.push("Invalid email format!");
+    }
+
+    var username = document.getElementById("username").value;
+    if (username.length > 15) {
+      errorMessages.push("Username must not exceed 15 characters!");
+    }
+
+    var fullName = document.getElementById("fullName").value;
+    var fullNameRegex = /^[A-Za-z ]+$/;
+    if (!fullNameRegex.test(fullName)) {
+      errorMessages.push("Full Name must only contain alphabets!");
+    }
+    if (fullName.length > 40) {
+      errorMessages.push("Full Name must not exceed 40 characters!");
+    }
+
+    var identity = document.getElementById("identity").value;
+    var identityRegex = /^\d+$/;
+    if (!identityRegex.test(identity)) {
+      errorMessages.push("Identity Number must only contain numbers!");
+    }
+    if (identity.length > 12) {
+      errorMessages.push("Identity Number must not exceed 12 digits!");
+    }
+
+    var phone = document.getElementById("phone").value;
+    if (!identityRegex.test(phone)) {
+      errorMessages.push("Phone Number must only contain numbers!");
+    }
+    if (phone.length > 11) {
+      errorMessages.push("Phone Number must not exceed 11 digits!");
+    }
+
+    if (errorMessages.length > 0) {
+      var errorMessage = "Please fix the following errors:\n\n" + errorMessages.join("\n");
+      alert(errorMessage);
+      return false;
+    } else {
       document.forms["registrationForm"].submit();
     }
   }
 </script>
+
 
 </head>
 <body>
@@ -92,15 +127,15 @@
     <h2>Registration</h2>
 
     <form action="http://localhost/utm/WP_MINI_PROJECT/php/registration.php" method="post" name="registrationForm">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" id="password" name="password" placeholder="Password" required>
-      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
-      <input type="text" name="Name" placeholder="Full Name" required>
-      <input type="text" name="Identity" placeholder="Identity Number" required>
-      <input type="email" name="Email" placeholder="Email" required>
-      <input type="tel" name="Phone" placeholder="Phone Number" required>
+      <input type="text" name="username" id="username" placeholder="Username" maxlength="15" required>
+      <input type="password" id="password" name="password" placeholder="Password" maxlength="15" required>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxlength="15" required>
+      <input type="text" name="Name" id="fullName" placeholder="Full Name" maxlength="40" required>
+      <input type="text" name="Identity" id="identity" placeholder="Identity Number" maxlength="12" required>
+      <input type="email" id="email" name="Email" placeholder="Email" required>
+      <input type="tel" name="Phone" id="phone" placeholder="Phone Number" maxlength="11" required>
       <textarea name="Address" placeholder="Residential Address" required></textarea>
-      <input type="submit" onclick="registerUser(); return false;">
+      <input type="submit" onclick="validateForm(); return false;">
     </form>
   </div>
 </body>

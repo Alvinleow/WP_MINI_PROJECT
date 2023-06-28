@@ -16,21 +16,38 @@ if ($conn->connect_error)
 $sql = "CREATE TABLE IF NOT EXISTS User (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     userlevel INTEGER(1) NOT NULL,
-    username VARCHAR(100) NOT NULL,
-    passwords VARCHAR(255) NOT NULL,
-    fullname VARCHAR(100) NOT NULL,
-    identityNum VARCHAR(20) NOT NULL,
+    username VARCHAR(15) NOT NULL,
+    passwords VARCHAR(15) NOT NULL,
+    fullname VARCHAR(40) NOT NULL,
+    identityNum VARCHAR(12) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    phone VARCHAR(20) NOT NULL,
+    phone VARCHAR(11) NOT NULL,
     addresses TEXT NOT NULL
-);
-
-INSERT INTO User (userlevel, username, passwords, fullname, identityNum, email, phone, addresses) 
-VALUES (2, 'admin1', 'Admin123', 'admin1', 'admin1', 'admin1', 'admin1', 'admin1');";
-
+)";
 
 if ($conn->query($sql) === TRUE) 
 {
+
+    // Table created successfully or already exists
+
+            // Check if initial data exists
+            $sqlCheckData = "SELECT * FROM User LIMIT 1";
+            $result = $conn->query($sqlCheckData);
+
+            if ($result->num_rows === 0) {
+                // Insert initial data into User table
+                $sqlInsertData = "INSERT INTO User (userlevel, username, passwords, fullname, identityNum, email, phone, addresses) 
+                                  VALUES (2, 'admin1', 'Admin123', 'admin1', 'admin1', 'admin1', 'admin1', 'admin1')";
+
+                if ($conn->query($sqlInsertData) === TRUE) {
+                    // Initial data inserted successfully
+                    echo "Initial data inserted successfully.";
+                } else {
+                    echo "Error inserting data: " . $conn->error;
+                }
+            } else {
+            }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userlevel = 1;
         $username = $_POST['username'];

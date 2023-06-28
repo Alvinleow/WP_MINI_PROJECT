@@ -21,9 +21,9 @@ $message = $_POST['message'];
 // Create the "contact" table if it doesn't exist
 $sqlCreateTable = "CREATE TABLE IF NOT EXISTS contact (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(40) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    phone VARCHAR(20) NOT NULL,
+    phone VARCHAR(11) NOT NULL,
     message TEXT NOT NULL
 )";
 
