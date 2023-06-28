@@ -62,7 +62,7 @@
 
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;
-    var regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+    var regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,15}$/;
 
     if (password !== confirmPassword) {
       errorMessages.push("Passwords do not match!");

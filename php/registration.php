@@ -17,7 +17,7 @@ $sql = "CREATE TABLE IF NOT EXISTS User (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     userlevel INTEGER(1) NOT NULL,
     username VARCHAR(15) NOT NULL,
-    passwords VARCHAR(15) NOT NULL,
+    passwords VARCHAR(200) NOT NULL,
     fullname VARCHAR(40) NOT NULL,
     identityNum VARCHAR(12) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -36,15 +36,29 @@ if ($conn->query($sql) === TRUE)
 
             if ($result->num_rows === 0) {
                 // Insert initial data into User table
-                $sqlInsertData = "INSERT INTO User (userlevel, username, passwords, fullname, identityNum, email, phone, addresses) 
-                                  VALUES (2, 'admin1', 'Admin123', 'admin1', 'admin1', 'admin1', 'admin1', 'admin1')";
+                $userlevel = 2;
+                $username = 'admin1';
+                $passwordAdmin = 'Admin123';
+                $fullname = 'admin1';
+                $identity = 'admin1';
+                $email = 'admin1';
+                $phone = 'admin1';
+                $address = 'admin1';
 
-                if ($conn->query($sqlInsertData) === TRUE) {
-                    // Initial data inserted successfully
+                $hashedPasswordAdmin = password_hash($passwordAdmin, PASSWORD_DEFAULT);
+
+                $stmt1 = $conn->prepare("INSERT INTO User (userlevel, username, passwords, fullname, identityNum, email, phone, addresses) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                $stmt1->bind_param("isssssss", $userlevel, $username, $hashedPasswordAdmin, $fullname, $identity, $email, $phone, $address);
+
+                // Execute statement
+                if ($stmt1-> execute()) {
+                    // Insertion successful
                     echo "Initial data inserted successfully.";
                 } else {
-                    echo "Error inserting data: " . $conn->error;
+                    echo "Error inserting data: " . $stmt1->error;
                 }
+
+                $stmt1->close();
             } else {
             }
 
