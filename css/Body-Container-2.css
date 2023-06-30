@@ -28,3 +28,19 @@
 a {
     color: black;
 }
+
+.centered {
+    text-align: center;
+}
+
+.form-field {
+    margin: 10px;
+}
+
+.form {
+    align-items: center;
+}
+
+.form-title {
+    text-align: center;
+}

@@ -59,7 +59,6 @@ function checkAttendance($conn, $eventName, $username)
 
   return "Not Participate";
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -104,6 +103,11 @@ function checkAttendance($conn, $eventName, $username)
       <label>Address:</label>
       <span><?php echo $address; ?></span>
     </div>
+
+    <div class="update-button">
+      <button class="update-information" onclick="location.href='update_profile.php'">Update Information</button>
+    </div>
+
     <div class="activities-list ">
       <h3>Activities with Attendance:</h3>
       <?php if ($eventListResult->num_rows > 0) : ?>
@@ -125,6 +129,7 @@ function checkAttendance($conn, $eventName, $username)
         <p>No activities with attendance found.</p>
       <?php endif; ?>
     </div>
+    
   </div>
 </body>
 

@@ -57,12 +57,17 @@ function addEvent() {
 }
 
 function removeEvent(eventBlock) {
-    // Remove the specified event block
-    eventBlock.remove();
+    // Display a confirmation dialog box
+    var confirmed = confirm('Are you sure you want to remove this event?');
   
-    // Update event data in cookies after removing an event
-    updateEventDataInCookies();
-  }
+    if (confirmed) {
+      // If the admin confirms, remove the event block
+      eventBlock.remove();
+  
+      // Update event data in cookies after removing an event
+      updateEventDataInCookies();
+    }
+}
   
 function saveEventData(eventName, eventDescription, eventDate, eventStartTime, eventEndTime) {
     // Create a JSON object to store event data

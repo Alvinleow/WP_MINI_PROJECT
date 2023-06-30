@@ -39,3 +39,29 @@ body {
   .eventName {
     width: 600px;
   }
+
+  .update-button {
+    text-align: center;
+  }
+
+  .update-information {
+    background-color: #4b4331;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+  }
+
+  .update-information:hover {
+    background-color: #6d604a;
+  }
+  
+  .update-information:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 67, 49, 0.4);
+  }
+  
+  .update-information:active {
+    background-color: #3c3427;
+  }

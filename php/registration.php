@@ -52,8 +52,8 @@ if ($conn->query($sql) === TRUE)
 
                 // Execute statement
                 if ($stmt1-> execute()) {
-                    // Insertion successful
-                    echo "Initial data inserted successfully.";
+                    // // Insertion successful
+                    // echo "Initial data inserted successfully.";
                 } else {
                     echo "Error inserting data: " . $stmt1->error;
                 }
